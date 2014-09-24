@@ -185,7 +185,6 @@ public class ContactListFragment extends ListFragment implements AdapterView.OnI
         builder.setNegativeButton(R.string.cancel, this);
         AlertDialog dialog = builder.create();
         dialog.show();
-
         return true;
     }
 
@@ -197,6 +196,4 @@ public class ContactListFragment extends ListFragment implements AdapterView.OnI
         }
         dialog.dismiss();
     }
-
-
 }
