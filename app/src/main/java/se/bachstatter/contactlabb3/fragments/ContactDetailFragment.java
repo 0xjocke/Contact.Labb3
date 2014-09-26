@@ -21,7 +21,8 @@ public class ContactDetailFragment extends Fragment {
     private Contact contact;
 
     /**
-     *
+     * if arguments contains Contact position code.
+     * get the chosen contact from teh static contact list and set it to contact variable.
      * @param savedInstanceState
      */
     @Override
@@ -32,6 +33,17 @@ public class ContactDetailFragment extends Fragment {
         }
     }
 
+    /**
+     * Inflate the layout with the  view
+     * if contact is not null
+     * Fill the textviews with the contacts get methods.
+     * Convert the imgurl to bitmap and set it to imageviewe with the help of picasso.
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return view
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
