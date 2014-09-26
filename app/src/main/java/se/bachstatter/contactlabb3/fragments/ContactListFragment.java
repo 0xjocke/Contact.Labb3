@@ -175,6 +175,18 @@ public class ContactListFragment extends ListFragment implements AdapterView.OnI
         mActivatedPosition = position;
     }
 
+    /**
+     * On item long click
+     * save posiotion to current position.
+     * Create a new alertdialog with AlertDialog builder.
+     * set message, title, positivebtn and negative. btn.
+     *
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     * @return
+     */
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
         currentPosForDialog = position;
@@ -188,6 +200,12 @@ public class ContactListFragment extends ListFragment implements AdapterView.OnI
         return true;
     }
 
+    /**
+     * Onclick on positivebtn remove the cosen contact and notify the adapter
+     * on both negative and positive click dismiss the dialog.
+     * @param dialog
+     * @param which
+     */
     @Override
     public void onClick(DialogInterface dialog, int which) {
         if(which == AlertDialog.BUTTON_POSITIVE){
